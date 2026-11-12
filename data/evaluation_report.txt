@@ -1,0 +1,32 @@
+======================================================================
+INSIDER THREAT DETECTION - MODEL EVALUATION REPORT
+======================================================================
+
+Test set size: 4117 sessions | Malicious (ground truth): 245
+Malicious users: ['MAL0000', 'MAL0001', 'MAL0002', 'MAL0003', 'MAL0004', 'MAL0005']
+
+----------------------------------------------------------------------
+MODEL: Statistical Z-score Baseline
+----------------------------------------------------------------------
+  Precision      : 0.187
+  Recall         : 0.167
+  F1-score       : 0.177
+  ROC-AUC        : 0.934
+  Avg Precision  : 0.303
+  Confusion Matrix -> TN:3694  FP:178  FN:204  TP:41
+  False Positive Rate: 0.0460
+
+----------------------------------------------------------------------
+MODEL: Isolation Forest
+----------------------------------------------------------------------
+  Precision      : 0.314
+  Recall         : 0.441
+  F1-score       : 0.367
+  ROC-AUC        : 0.898
+  Avg Precision  : 0.333
+  Confusion Matrix -> TN:3636  FP:236  FN:137  TP:108
+  False Positive Rate: 0.0610
+
+======================================================================
+Isolation Forest F1 improvement over statistical baseline: +107.5%
+======================================================================
